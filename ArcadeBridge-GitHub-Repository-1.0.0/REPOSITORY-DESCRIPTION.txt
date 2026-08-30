@@ -1,1 +1,0 @@
-ArcadeBridge lets remote players use controllers or keyboards through a browser while a Windows host receives up to four virtual gamepads for emulators and PC games.
