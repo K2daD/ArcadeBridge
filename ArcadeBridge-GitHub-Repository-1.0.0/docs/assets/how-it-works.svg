@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="620" viewBox="0 0 1400 620" role="img" aria-labelledby="title desc">
+  <title id="title">How ArcadeBridge works</title>
+  <desc id="desc">Players send browser controller input through a secure relay to a Windows Host, which creates four virtual gamepads for games and emulators.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#090c20"/><stop offset="1" stop-color="#1a102e"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#34e8ff"/><stop offset="1" stop-color="#ff2dad"/></linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L9 3 0 6Z" fill="#ff44bd"/></marker>
+  </defs>
+  <rect width="1400" height="620" rx="24" fill="url(#bg)"/>
+  <text x="700" y="60" text-anchor="middle" font-family="Segoe UI,Arial" font-size="34" font-weight="700" fill="#fff">How ArcadeBridge works</text>
+  <g font-family="Segoe UI,Arial">
+    <g transform="translate(55 125)">
+      <rect width="300" height="360" rx="26" fill="#101932" stroke="#35e9ff" stroke-width="2"/>
+      <text x="150" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#6cecff">Players</text>
+      <g fill="#171f3d" stroke="#6cecff"><rect x="35" y="80" width="230" height="54" rx="12"/><rect x="35" y="147" width="230" height="54" rx="12"/><rect x="35" y="214" width="230" height="54" rx="12"/><rect x="35" y="281" width="230" height="54" rx="12"/></g>
+      <g font-size="18" fill="#fff"><text x="61" y="113">P1  Controller / keyboard</text><text x="61" y="180">P2  Controller / keyboard</text><text x="61" y="247">P3  Controller / keyboard</text><text x="61" y="314">P4  Controller / keyboard</text></g>
+      <text x="150" y="350" text-anchor="middle" font-size="15" fill="#aebbd8">Web browser • no app install</text>
+    </g>
+    <path d="M375 305H505" stroke="url(#line)" stroke-width="7" marker-end="url(#arrow)" filter="url(#g)"/>
+    <text x="440" y="278" text-anchor="middle" fill="#d2d9ee" font-size="16">authenticated WSS</text>
+    <g transform="translate(525 170)">
+      <path d="M40 80c-9-72 93-100 129-44 35-63 148-36 137 45 66 4 80 100 13 121H59C-8 187-16 95 40 80Z" fill="#221636" stroke="#ff3bb8" stroke-width="3"/>
+      <text x="165" y="120" text-anchor="middle" font-size="25" font-weight="700" fill="#ff6bc9">ArcadeBridge Relay</text>
+      <text x="165" y="155" text-anchor="middle" font-size="16" fill="#d7cae8">matches room code + password</text>
+      <text x="165" y="180" text-anchor="middle" font-size="16" fill="#d7cae8">forwards live input</text>
+      <text x="165" y="232" text-anchor="middle" font-size="14" fill="#a89ab8">The Relay does not run the game</text>
+    </g>
+    <path d="M865 305H975" stroke="url(#line)" stroke-width="7" marker-end="url(#arrow)" filter="url(#g)"/>
+    <text x="920" y="278" text-anchor="middle" fill="#d2d9ee" font-size="16">outbound WSS</text>
+    <g transform="translate(995 115)">
+      <rect width="350" height="390" rx="26" fill="#111b34" stroke="#9f92ff" stroke-width="2"/>
+      <text x="175" y="48" text-anchor="middle" font-size="24" font-weight="700" fill="#c2b9ff">Windows Host</text>
+      <rect x="45" y="78" width="260" height="66" rx="13" fill="#20264a" stroke="#35e9ff"/>
+      <text x="175" y="106" text-anchor="middle" font-size="19" font-weight="600" fill="#fff">ArcadeBridge Host</text><text x="175" y="130" text-anchor="middle" font-size="15" fill="#b7c9e8">slots, safety, lobby controls</text>
+      <path d="M175 149V190" stroke="#ff3bb8" stroke-width="4" marker-end="url(#arrow)"/>
+      <rect x="45" y="198" width="260" height="66" rx="13" fill="#20264a" stroke="#ff3bb8"/>
+      <text x="175" y="226" text-anchor="middle" font-size="19" font-weight="600" fill="#fff">ViGEmBus</text><text x="175" y="250" text-anchor="middle" font-size="15" fill="#e2b4d5">four virtual gamepads</text>
+      <path d="M175 270V308" stroke="#35e9ff" stroke-width="4" marker-end="url(#arrow)"/>
+      <rect x="45" y="316" width="260" height="50" rx="13" fill="#14333b" stroke="#35e9ff"/>
+      <text x="175" y="348" text-anchor="middle" font-size="19" font-weight="600" fill="#fff">Emulator or PC game</text>
+    </g>
+    <text x="700" y="565" text-anchor="middle" font-size="18" fill="#b9c6df">The Host runs the game. Players send input only. Closing the room releases every virtual control.</text>
+  </g>
+</svg>
